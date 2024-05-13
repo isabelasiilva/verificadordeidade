@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <main>
+        <div>
+            <p>Qual o ano de nascimento?
+                <input id="txtano" type="number">
+            </p>
+        
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked>  <!-- checked é usado para obrigar o usuário a clicar em um dos radios, ambos tem que ter o mesmo name se nao marca os dois e nao deixa desmarcar-->
+                <label for="masc">Masculino</label>
+
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p> 
+        
+            <input type="button" value="Verificar" onclick="verificar()">
+        </div>        
+
+
+        <div id="res"  >Preencha os dados acima para ver o resultado
+        </div>
+        <!-- <img id="img" src="./" alt=""> -->
+        
+    </main>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
