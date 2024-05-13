@@ -1,5 +1,5 @@
 function verificar() {
-    // window.alert('Funciona')
+
 
     var data = new Date()  // vai pegar a data atual
     var ano = data.getFullYear()  // vai pegar o ano atual com o 4 digitos 
@@ -12,7 +12,7 @@ function verificar() {
 
     } else {
         var fsex = document.getElementsByName('radsex')
-        var idade = ano - Number(fAno.value) // idade = valor do ano atual menos o valor do ano digitado
+        var idade = ano - Number(fAno.value) 
         var genero = ''
 
         var img = document.createElement('img') // é a forma de criar uma imagem dinamicamente pelo js - vai criar uma tag img 
@@ -26,7 +26,7 @@ function verificar() {
             
             //colocando teste de idade dentro do gênero homem
 
-            if (idade >= 0 && idade < 10) {
+            if (idade >= 0 && idade <= 10) {
                 //Criança 
                 img.setAttribute('src', 'imgCriancaM.png')
             } else if (idade> 10 && idade < 22) {
@@ -46,7 +46,7 @@ function verificar() {
 
             //colocando teste de idade dentro do gênero mulher
 
-            if (idade <= 0 && idade < 10) {
+            if (idade <= 0 && idade <= 10) {
                 //Criança                 
                 img.setAttribute('src', 'imgCriancaF.png')
             } else if (idade> 10 && idade < 22) {
@@ -62,8 +62,7 @@ function verificar() {
             
         }
         
-        // res.style.textAlign = 'center'  como centralizar o item pelo js
-
+        
         res.innerHTML = `Detectamos ${genero}  com ${idade} anos.`
         res.appendChild(img) // comando para adicionar um novo elemento, que é a img 
         
